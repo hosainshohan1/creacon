@@ -41,4 +41,10 @@ return [
       'redirect' => 'http://127.0.0.1:8000/auth/github/callback',
     ],
 
+    'google' => [
+      'client_id' => '158803128230-igkm8njj97771i7gs5igi7u3reuvispm.apps.googleusercontent.com',
+      'client_secret' => 'QvNXJtZ8NLW_Y0T26dbHmVSK',
+      'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
+    ],
+
 ];

@@ -9,21 +9,31 @@ use Socialite;
 
 class ApiController extends Controller
 {
-  public function redirectToProvider()
+  public function redirectToProviderGithub()
   {
       return Socialite::driver('github')->redirect();
   }
 
-  /**
-   * Obtain the user information from GitHub.
-   *
-   * @return Response
-   */
-  public function handleProviderCallback()
+  public function handleProviderCallbackGithub()
   {
       $user = Socialite::driver('github')->user();
 
       // $user->token;
       print_r($user->token);
+  }
+
+  public function redirectToProviderGoogle()
+  {
+      return Socialite::driver('google')->redirect();
+  }
+
+  public function handleProviderCallbackGoogle()
+  {
+      $user = Socialite::driver('google')->user();
+
+      // $user->token;
+      print_r("<pre>");
+      print_r($user);
+      print_r("</pre>");
   }
 }
