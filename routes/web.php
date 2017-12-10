@@ -20,3 +20,6 @@ Route::get('auth/github/callback', 'ApiController@handleProviderCallbackGithub')
 
 Route::get('auth/google', 'ApiController@redirectToProviderGoogle');
 Route::get('auth/google/callback', 'ApiController@handleProviderCallbackGoogle');
+
+Route::get('auth/facebook', 'ApiController@redirectToProviderFacebook');
+Route::get('auth/facebook/callback', 'ApiController@handleProviderCallbackFacebook');
