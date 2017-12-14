@@ -19,7 +19,9 @@ class ApiController extends Controller
       $user = Socialite::driver('github')->user();
 
       // $user->token;
-      print_r($user->token);
+      print_r("<pre>");
+      print_r($user);
+      print_r("</pre>");
   }
 
   public function redirectToProviderGoogle()

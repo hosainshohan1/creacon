@@ -23,3 +23,7 @@ Route::get('auth/google/callback', 'ApiController@handleProviderCallbackGoogle')
 
 Route::get('auth/facebook', 'ApiController@redirectToProviderFacebook');
 Route::get('auth/facebook/callback', 'ApiController@handleProviderCallbackFacebook');
+
+//Testing ground
+Route::get('test', 'TestController@index');
+Route::post('test/subt', 'TestController@subt');
