@@ -30,10 +30,11 @@ class TestController extends Controller
 
       //$this->validate($request, $rules);
       $this->validate($request,
-      ['one' => 'required',
+      ['one' => 'required | max:3',
        'two' => 'required'],
-      ['one.required' => 'this is my custom error message for required',
-       'two.required' => 'my boy']
+      ['one.required' => 'A custom message',
+        'one.max' => 'Not more than 3 please',
+       'two.required' => 'Another One']
       );
     }
 }

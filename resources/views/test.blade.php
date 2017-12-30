@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Test Controller</h1>
-    <form action="{{url('/test/subt')}}" method="post">
-      {{csrf_field()}}
-      <label for="">One</label>
-      <input type="text" name="one" value="">
+@extends('layouts.app')
 
-      <label for="">Two</label>
-      <input type="text" name="two" value="">
-
-      <button type="submit" name="button">Submit</button>
-      @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
-    </form>
-  </body>
-</html>
+@section('content')
+<div class="container">
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://media-exp2.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAUEAAAAJDQ5MjAxMmNjLWUzNjAtNGEzZC05NzJkLTFmNzZlZmJlMWUzZQ.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://media-exp2.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAUEAAAAJDQ5MjAxMmNjLWUzNjAtNGEzZC05NzJkLTFmNzZlZmJlMWUzZQ.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Contrator</h4>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://media-exp2.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAUEAAAAJDQ5MjAxMmNjLWUzNjAtNGEzZC05NzJkLTFmNzZlZmJlMWUzZQ.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
+@endsection

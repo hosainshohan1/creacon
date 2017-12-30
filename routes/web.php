@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend\landing');
 });
 
 Route::get('auth/github', 'ApiController@redirectToProviderGithub');
@@ -27,3 +27,7 @@ Route::get('auth/facebook/callback', 'ApiController@handleProviderCallbackFacebo
 //Testing ground
 Route::get('test', 'TestController@index');
 Route::post('test/subt', 'TestController@subt');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
